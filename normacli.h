@@ -12,6 +12,37 @@ typedef struct {
 
 } InputBuffer;
 
+typedef enum {
+	META_COMMAND,
+	NON_META_COMMAND
+} MetaCommandResult;
+
+typedef enum {
+	PREPARE_SUCCESS,
+	PREPARE_UNRECOGNIZED
+} PrepareResult;
+
+typedef enum {
+	STATEMENT_INSERT, 
+	STATEMENT_SELECT
+} StatementType;
+
+typedef struct {
+	StatementType type;
+} Statement;
+
+MetaCommandResult exec_meta(InputBuffer* input_buffer){
+	if (strcmp(input_buffer->buffer, ":exit") == 0){
+		exit(EXIT_SUCCESS);
+	} else {
+		return NON_META_COMMAND;
+	}
+}
+
+PrepareResult prepare_statement(InputBuffer* input_buffer, Statement* statement){
+
+}
+
 InputBuffer* new_input_buffer() {
 
   InputBuffer* input_buffer = malloc(sizeof(InputBuffer));
