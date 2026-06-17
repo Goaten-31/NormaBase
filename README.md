@@ -10,7 +10,7 @@
     The potential goal however, is to create a real, functional database to help store and manipulate data for ML and AI models.
 
 - ## How was NormaBase built?
-    NormaBase is built using C.\
+    NormaBase is built using C.
     Why not Rust? Or C++?
     
     There wasn't any need for OOP features from C++, you'll eventually strip down C++ until you're working with what C already provides.\
