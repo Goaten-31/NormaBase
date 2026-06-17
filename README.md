@@ -11,7 +11,7 @@
 
 - ## How was NormaBase built?
     NormaBase is built using C.\
-    Why not Rust? Or C++?\
+    Why not Rust? Or C++?
     
     There wasn't any need for OOP features from C++, you'll eventually strip down C++ until you're working with what C already provides.\
 
