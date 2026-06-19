@@ -15,8 +15,8 @@ int main(int argc, char* argv[]){
 		read_input(input_buffer);
 
 
-	if (input_buffer -> buffer[0], ":"){
-		switch (exec_command(input_buffer)) {
+	if (input_buffer -> buffer[0], ':'){
+		switch (exec_meta(input_buffer)) {
 			case (META_COMMAND):
 				continue;
 			case (NON_META_COMMAND):
@@ -34,8 +34,9 @@ int main(int argc, char* argv[]){
 			continue;
 	}
 
-	execute_statement(&statement);
+	exec_statement(&statement);
 	printf("Execution Successful.\n");
 
 	return 0;
+}
 }
